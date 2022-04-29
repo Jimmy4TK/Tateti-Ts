@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ta Te Ti</title>
+        
+        <style type="text/css">
+            h1 {
+                color: gray;
+                font-family: 'Times New Roman'; 
+            }
+            
+        </style>
+        <link rel="stylesheet" type="text/css" href="estilo.css"/>
+        <script src="src/js/tateti.js"></script>
+    </head>
+    <body style="background-color: #1c1c1c;">
+        <div>
+            <h1 style="text-align: center;"> Juego Ta Te Ti </h1>
+            <div style="text-align: center;">
+                <div style="font-size: 20px; color: whitesmoke;">
+                    <p style="text-align: left;">Puntaje jugador <span id="Player1"></span>: <span id="pp1" type="number"></span></p>
+                    <p style="text-align: right; position: relative; bottom: 42px;">Puntaje jugador <span id="Player2"></span>: <span id="pp2" type="number"></span></p>
+                </div>
+                <button id="btn" style="height: 60px; width:180px" onclick="p();">Cambiar nombre de los jugadores</button>
+            </div>
+            <form style="text-align: center; visibility: hidden;" id="form" name="form" action="" method="get">
+                <input type="text" name="player1" placeholder="Rojo"><dl></dl>
+                <input type="text" name="player2" placeholder="Verde">
+            </form>
+            <div style="font-size: 20px; color: whitesmoke;">
+                <p style="text-align: center;">Jugador actual: <span id="cp" type="text"></span></p>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <button style="height: 40px; width:110px" onclick="Tateti=createtateti();">Start Game</button>
+        </div>
+        <div>
+            <table id ="mitabla" class="mitabla" style="visibility:hidden">
+                <thead>
+                    <tr width="80" height="80">
+                        <td id="1" width="80" height="80" onclick="Tateti.marcada(this,0)"> </td>
+                        <td id="2" width="80" height="80" onclick="Tateti.marcada(this,1)"> </td>
+                        <td id="3" width="80" height="80" onclick="Tateti.marcada(this,2)"> </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr width="80" height="80">
+                        <td id="4" align="center" onclick="Tateti.marcada(this,3)"> </td>
+                        <td id="5" align="center" onclick="Tateti.marcada(this,4)"> </td>
+                        <td id="6" align="center" onclick="Tateti.marcada(this,5)"> </td>
+                    </tr>
+                    <tr width="80" height="80">
+                        <td id="7" align="center" onclick="Tateti.marcada(this,6)"> </td>
+                        <td id="8" align="center" onclick="Tateti.marcada(this,7)"> </td>
+                        <td id="9" align="center" onclick="Tateti.marcada(this,8)"> </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+   </body>
+</html>
